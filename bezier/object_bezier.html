@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        canvas{
+            display: block;
+            position: absolute;
+            top:0px;
+            left:0px;
+            pointer-events: none; 
+        }
+        #pointList div{
+            background-color: rgba(200,200,200,0.5);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top:10px;
+            left:10px;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+        }
+        .controldiv{
+            background-color: aliceblue;
+            position: absolute;
+            top:0px;
+            right: 0px;
+            padding:5px;
+            width: 300px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 背景网格层 -->
+    <canvas id="bg"></canvas>
+    <!-- 曲线层 -->
+    <canvas id="canvas"></canvas>
+    <!-- 小球运动层 -->
+    <canvas id="ballMove"></canvas>
+    <!-- 用于拖动控制点的div集合 -->
+    <div id="pointList"></div>
+
+    <div class="controldiv">
+        <button type="button" onclick="add_point()">增加路径点</button>
+        <button type="button" onclick="del_point()">删除路径点</button>
+        <input placeholder="请输入小球移动时间" id="timeInput" onblur="setTime()" />
+        <button type="button" onclick="ball_move()">小球移动</button>
+    </div>
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

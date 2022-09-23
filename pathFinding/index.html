@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
+<body>
+    <div id="spanList"></div>
+    <div id="controldiv">
+        <button id="getBreadthFirst">广度优先算法</button>
+        <button id="getDijkstra">dijkstra算法</button>
+        <button id="getGreedSearch">贪心算法</button>
+        <button id="getAstar">A*算法</button>
+        <button onclick="clearBlock()">清除全部障碍</button>
+    </div>
+    <div id="info">
+        <p id="lengthP">总距离:</p>
+        <p id="nodeSumP">总探测结点:</p>
+    </div>
+    <div id="help">
+        <p>click<i class="red"></i>set Start, click<i class="blue"></i>set End</p>
+        <br>
+        <p>拖动鼠标创造障碍</p>
+    </div>
+    
+    <script type="text/javascript" src="./algorithm.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    
+</body>
+</html>
